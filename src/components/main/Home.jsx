@@ -3,7 +3,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { Routes, Route, Link } from "react-router-dom";
 import MaterialTable from "../table/MaterialTable";
-import BootstrapTable from "../table/BootstrapTable";
+import BootstrapTableNext from "../table/BootstrapTableNext";
 import data from "../../data/data.json";
 
 const displayColumns = [
@@ -39,7 +39,7 @@ const Home = () => {
               />
               <Route
                 path="/boot"
-                element={<BootstrapTable data={filteredData} />}
+                element={<BootstrapTableNext data={filteredData} />}
               />
             </Routes>
           </Col>
