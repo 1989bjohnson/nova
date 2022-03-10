@@ -5,6 +5,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import MaterialTable from "../table/MaterialTable";
 import BootstrapTableNext from "../table/BootstrapTableNext";
 import data from "../../data/data.json";
+import CustomForm from "../form/CustomForm";
 
 const displayColumns = [
   "granite_equip_inst_id",
@@ -31,6 +32,7 @@ const Home = () => {
             <nav className="w-100 d-flex justify-content-around">
               <Link to="/mui">Material UI Table</Link>
               <Link to="/boot">Bootstrap Table</Link>
+              <Link to="/form">Form</Link>
             </nav>
             <Routes>
               <Route
@@ -41,6 +43,7 @@ const Home = () => {
                 path="/boot"
                 element={<BootstrapTableNext data={filteredData} />}
               />
+              <Route path="/form" element={<CustomForm />} />
             </Routes>
           </Col>
         </Row>
