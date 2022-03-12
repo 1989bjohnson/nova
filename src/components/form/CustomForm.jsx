@@ -5,10 +5,9 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
 const CustomForm = () => {
-
   return (
     <>
-      <h1>Form</h1>
+      <h1 className="text-center my-3">PDG Tool</h1>
       <Form>
         <Form.Group as={Row} className="mb-3" controlId="formCategory">
           <Form.Label column sm={2}>
@@ -50,13 +49,14 @@ const CustomForm = () => {
             <Form.Control type="text" />
           </Col>
         </Form.Group>
-
-        <Button variant="primary" type="submit" className="mx-3">
-          Submit
-        </Button>
-        <Button variant="secondary" type="reset" className="mx-3">
-          Clear
-        </Button>
+        <div className="d-flex justify-content-center w-100 mt-3">
+          <Button variant="primary" type="submit" className="mx-3">
+            Submit
+          </Button>
+          <Button variant="secondary" type="reset" className="mx-3">
+            Clear
+          </Button>
+        </div>
       </Form>
     </>
   );
