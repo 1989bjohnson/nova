@@ -3,10 +3,10 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { Routes, Route, Link } from "react-router-dom";
 import MaterialTable from "../table/MaterialTable";
-import MaterialTable2 from "../table/MaterialTable2";
 import BootstrapTableNext from "../table/BootstrapTableNext";
 import data from "../../data/data.json";
 import CustomForm from "../form/CustomForm";
+import CustomReport from "../report/CustomReport";
 
 const displayColumns = [
   "granite_equip_inst_id",
@@ -27,13 +27,14 @@ const filteredData = data.map((entry) => {
 const Home = () => {
   return (
     <>
-      <Container>
-        <Row>
+      <Container className="vh-100">
+        <Row className="h-100">
           <Col>
             <nav className="w-100 d-flex justify-content-around">
               <Link to="/mui">Material UI Table</Link>
               <Link to="/boot">Bootstrap Table</Link>
               <Link to="/form">PDG Tool</Link>
+              <Link to="/report">NOVA Report Dashboard</Link>
             </nav>
             <Routes>
               <Route
@@ -45,6 +46,7 @@ const Home = () => {
                 element={<BootstrapTableNext data={filteredData} />}
               />
               <Route path="/form" element={<CustomForm />} />
+              <Route path="/report" element={<CustomReport />} />
             </Routes>
           </Col>
         </Row>
