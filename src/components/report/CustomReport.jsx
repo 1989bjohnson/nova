@@ -3,22 +3,14 @@ import { Row } from "react-bootstrap";
 import { Col } from "react-bootstrap";
 import { Table } from "react-bootstrap";
 
-const data = [
-  { name: "data1", value: 400 },
-  { name: "data2", value: 700 },
-  { name: "data3", value: 700 },
-  { name: "data3", value: 200 },
-  { name: "data4", value: 1000 },
-];
-
 const colors = ["#00477D", "#00233D", "#006BBD", "#0072C9", "#005CA3"];
 
-const CustomReport = () => {
+const CustomReport = ({ data }) => {
   return (
-    <Row style={{ height: "90%" }}>
+    <Row style={{ height: "85%" }}>
       <Col className="d-flex justify-content-center align-items-center">
         <ResponsiveContainer width="100%" height="90%">
-          <PieChart width={500} height={500}>
+          <PieChart width={300} height={300}>
             <Pie data={data} dataKey="value" outerRadius={200} fill="grey">
               {data.map((entry, index) => (
                 <Cell key={`cell-${index}`} fill={colors[index]} />

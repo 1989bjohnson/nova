@@ -7,6 +7,7 @@ import BootstrapTableNext from "../table/BootstrapTableNext";
 import data from "../../data/data.json";
 import CustomForm from "../form/CustomForm";
 import CustomReport from "../report/CustomReport";
+import ReportsDashboard from "../report/ReportsDashboard";
 
 const displayColumns = [
   "granite_equip_inst_id",
@@ -30,7 +31,7 @@ const Home = () => {
       <Container className="vh-100">
         <Row className="h-100">
           <Col>
-            <nav className="w-100 d-flex justify-content-around">
+            <nav className="w-100 d-flex justify-content-around my-5">
               <Link to="/mui">Material UI Table</Link>
               <Link to="/boot">Bootstrap Table</Link>
               <Link to="/form">PDG Tool</Link>
@@ -46,7 +47,7 @@ const Home = () => {
                 element={<BootstrapTableNext data={filteredData} />}
               />
               <Route path="/form" element={<CustomForm />} />
-              <Route path="/report" element={<CustomReport />} />
+              <Route path="/report" element={<ReportsDashboard />} />
             </Routes>
           </Col>
         </Row>
